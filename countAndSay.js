@@ -2,34 +2,24 @@
  * @param {number} n
  * @return {string}
  */
-var countAndSay = function(n) {
-    if(n < 2) {
-        return "1";
-    } else {
-        let previousStr = countAndSay(n-1);
-                   let string =  "",
-                      curr = "",
-                      count = 0;
-      
-        
-    }
+const countAndSay = function(n) {
+    if(n < 2) return "1";
+    return say(countAndSay(n-1));
 };
 
-var say = function(cb) {
-     let string =  "",
-           curr = "",
-          count = 1;
-    for (let i = 0; i < cb.length; i++) {
-        if (!curr) {
-            curr = cb[i];
-        }
+// Helper 
+function say (cb) {
+    let string =  "",
+          curr = cb[0],
+         count = 1;
+    for (let i = 1; i < cb.length; i++) {
         if(cb[i] === curr) {
-            ++count;       
-        } else {
-            string += count + curr;
-            curr = cb[i];
-            count = 1;
-            
+            ++count;
+            continue;
         }
+        string = string + '' + count + curr;
+        curr = cb[i];
+        count = 1;
     }
+    return string =  string + '' + count + curr;
 }
