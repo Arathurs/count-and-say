@@ -9,10 +9,10 @@ To determine how you "say" a digit string, split it into the **minimal** number 
 
 For example, the saying and conversion for digit string `"3322251"`:
 
-                                      "3322251"
-                        two 3's, three 2's, one 5, and one 1
-                                 23 + 32 + 15 + 11
-                                     "23321511"
+                                               "3322251"
+                                  two 3's, three 2's, one 5, and one 1
+                                            23 + 32 + 15 + 11
+                                               "23321511"
 
 Given a positive integer `n`, return the `n<sup>th</sup>` term of the _**count-and-say**_ sequence.
 
