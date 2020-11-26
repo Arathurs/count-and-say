@@ -7,7 +7,8 @@ const countAndSay = function(n) {
     return say(countAndSay(n-1));
 };
 
-// Helper Function which "says" the count which is returned
+// Helper Function which "says" the count string value
+// which is returned by countAndSay()
 function say (cb) {
     let string =  "",
           curr = cb[0],
